@@ -60,13 +60,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_6sdp"
         android:progress="30"
-        android:maxHeight="@dimen/_90sdp"
         app:indicatorColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id"
         app:trackColor="#98FFFFFF"
-        app:trackCornerRadius="4dp"
-        app:trackThickness="@dimen/_6sdp" />
+        app:trackCornerRadius="@dimen/_5sdp"
+        app:trackThickness="@dimen/_9sdp" />
 
     <TextView
         android:id="@+id/available"
