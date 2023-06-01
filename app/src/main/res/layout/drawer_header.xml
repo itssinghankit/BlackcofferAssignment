@@ -1,82 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#40657D"
+    android:background="@drawable/drawer_bg"
     android:padding="@dimen/_19sdp">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/person_container"
         android:layout_width="@dimen/_44sdp"
         android:layout_height="@dimen/_44sdp"
+        app:cardCornerRadius="@dimen/_22sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="@dimen/_22sdp"
-        app:strokeWidth="@dimen/_1sdp"
-        android:id="@+id/person_container"
-        app:strokeColor="@color/white">
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1sdp">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/person"/>
+            android:src="@drawable/person" />
     </com.google.android.material.card.MaterialCardView>
+
     <ImageView
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
         android:src="@drawable/baseline_settings_24"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ANKIT SINGH"
         android:id="@+id/name"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:fontFamily="@font/nunitosans_10pt_semibold"
-        app:layout_constraintTop_toBottomOf="@id/person_container"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:textSize="@dimen/_12ssp"/>
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/nunitosans_10pt_semibold"
+        android:text="ANKIT SINGH"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/person_container" />
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/nunitosans_10pt_regular"
         android:text="AAGHAZ000E222"
         android:textColor="@color/white"
-        android:id="@+id/id"
-        app:layout_constraintTop_toBottomOf="@id/name"
+        android:textSize="@dimen/_9ssp"
         app:layout_constraintStart_toStartOf="parent"
-        android:fontFamily="@font/nunitosans_10pt_regular"
-        android:layout_marginTop="@dimen/_3sdp"
-        android:textSize="@dimen/_9ssp"/>
+        app:layout_constraintTop_toBottomOf="@id/name" />
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_bar"
         android:layout_width="@dimen/_80sdp"
         android:layout_height="wrap_content"
-        app:trackCornerRadius="4dp"
-        android:id="@+id/progress_bar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:indicatorColor="@color/white"
-        android:progress="30"
-        app:trackColor="#98FFFFFF"
-         app:trackThickness="@dimen/_6sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        app:layout_constraintTop_toBottomOf="@+id/id"/>
+        android:progress="30"
+        android:maxHeight="@dimen/_90sdp"
+        app:indicatorColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id"
+        app:trackColor="#98FFFFFF"
+        app:trackCornerRadius="4dp"
+        app:trackThickness="@dimen/_6sdp" />
 
     <TextView
+        android:id="@+id/available"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/nunitosans_10pt_regular"
         android:text="Available"
         android:textColor="@color/white"
-        android:id="@+id/available"
-        app:layout_constraintTop_toBottomOf="@id/progress_bar"
+        android:textSize="@dimen/_8ssp"
         app:layout_constraintStart_toStartOf="parent"
-        android:fontFamily="@font/nunitosans_10pt_regular"
-        android:layout_marginTop="@dimen/_6sdp"
-        android:textSize="@dimen/_8ssp"/>
+        app:layout_constraintTop_toBottomOf="@id/progress_bar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

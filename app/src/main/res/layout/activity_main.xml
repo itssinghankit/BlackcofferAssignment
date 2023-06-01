@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/drawer_layout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,12 +24,72 @@
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:navigationIcon="@drawable/navigation_icon"
-                app:subtitle="Indirapuram, Ghaziabad"
-                app:subtitleTextColor="@color/white"
-                app:title="Howdy ANKIT SINGH !!"
-                app:titleTextColor="@color/white">
+                app:navigationIcon="@drawable/navigation_icon">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/nunitosans_10pt_semibold"
+                        android:text="Howdy ANKIT SINGH !!"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/loc_img"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:src="@drawable/baseline_location_on_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        app:layout_constraintStart_toEndOf="@id/location"
+                        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:fontFamily="@font/nunitosans_10pt_regular"
+                        android:text="Indirapuram, Ghaziabad"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/loc_img"
+                        app:layout_constraintTop_toBottomOf="@id/name" />
+
+                    <ImageView
+                        android:id="@+id/refine"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_9sdp"
+                        android:src="@drawable/refine_logo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/refine_txt"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunitosans_10pt_regular"
+                        android:text="Refine"
+                        android:id="@+id/refine_txt"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintEnd_toEndOf="@id/refine"
+                        app:layout_constraintStart_toStartOf="@id/refine"
+
+                        app:layout_constraintTop_toBottomOf="@id/refine"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 <!--                <ImageView-->
 <!--                    android:layout_width="wrap_content"-->
 <!--                    android:layout_height="wrap_content"-->
@@ -64,7 +125,11 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/drawer_header">
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu"
+        app:itemTextColor="@color/darkblue"
+        app:itemRippleColor="@color/grey"
+        android:background="@color/white">
 
     </com.google.android.material.navigation.NavigationView>
 

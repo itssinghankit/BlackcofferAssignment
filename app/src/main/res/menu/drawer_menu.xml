@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Edit Profile" />
+    <item android:title="My Network" />
+    <item android:title="Switch to Business" />
+    <item android:title="Switch to Merchant" />
+    <item android:title="Dating" />
+    <item android:title="Matrimony" />
+    <item android:title="Buy-Sell-Rent" />
+    <item android:title="Jobs" />
+    <item android:title="Business Cards" />
+    <item android:title="Hashtags" />
+    <item android:title="Notes" />
+    <item android:title="Live Loactions" />
+</menu>
