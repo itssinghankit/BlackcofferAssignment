@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#40657D"
+    android:padding="@dimen/_19sdp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/_44sdp"
+        android:layout_height="@dimen/_44sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/_22sdp"
+        app:strokeWidth="@dimen/_1sdp"
+        android:id="@+id/person_container"
+        app:strokeColor="@color/white">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/person"/>
+    </com.google.android.material.card.MaterialCardView>
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/baseline_settings_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANKIT SINGH"
+        android:id="@+id/name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunitosans_10pt_semibold"
+        app:layout_constraintTop_toBottomOf="@id/person_container"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textSize="@dimen/_12ssp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AAGHAZ000E222"
+        android:textColor="@color/white"
+        android:id="@+id/id"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:textSize="@dimen/_9ssp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        app:trackCornerRadius="4dp"
+        android:id="@+id/progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:indicatorColor="@color/white"
+        android:progress="30"
+        app:trackColor="#98FFFFFF"
+         app:trackThickness="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@+id/id"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Available"
+        android:textColor="@color/white"
+        android:id="@+id/available"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:textSize="@dimen/_8ssp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
