@@ -1,5 +1,6 @@
 package com.example.blackcoffer
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -29,6 +30,12 @@ class MainActivity : AppCompatActivity() {
 
         //to set up our drawer layout
         setUpDrawerLayout()
+
+        //after refine is clicked
+        binding.refine.setOnClickListener{
+            val intent= Intent(this,RefineActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
