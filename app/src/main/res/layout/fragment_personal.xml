@@ -9,6 +9,7 @@
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search"
+        style="@style/searchbar"
         android:layout_width="@dimen/_230sdp"
         android:layout_height="@dimen/_20sdp"
         android:layout_marginStart="@dimen/_16sdp"
@@ -138,7 +139,7 @@
                             android:id="@+id/item1_status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_19sdp"
                             android:layout_marginTop="@dimen/_12sdp"
                             android:ellipsize="end"
                             android:fontFamily="@font/nunitosans_10pt_semibold"
@@ -153,13 +154,13 @@
                             android:id="@+id/item1_details"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_19sdp"
                             android:layout_marginTop="@dimen/_3sdp"
                             android:layout_marginBottom="@dimen/_12sdp"
                             android:ellipsize="end"
                             android:fontFamily="@font/nunitosans_10pt_regular"
                             android:maxLines="1"
-                            android:text="Hi community! I am open to new connections "
+                            android:text="Hi community! I am open to new connections \u0022😊\u0022"
                             android:textColor="@color/darkblue"
                             android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -196,22 +197,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/item1">
-                <!--        <com.google.android.material.card.MaterialCardView-->
-                <!--            android:layout_width="@dimen/_42sdp"-->
-                <!--            android:layout_height="@dimen/_42sdp"-->
-                <!--            android:id="@+id/img1"-->
-                <!--            app:cardElevation="2dp"-->
-                <!--            android:layout_marginTop="@dimen/_16sdp"-->
-                <!--            app:cardUseCompatPadding="true"-->
-                <!--            app:layout_constraintTop_toTopOf="@id/item1"-->
-                <!--            app:layout_constraintStart_toStartOf="@id/item1"-->
-                <!--            app:layout_constraintEnd_toStartOf="@id/item1">-->
-                <!--            <ImageView-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="match_parent"-->
-                <!--                android:src="@drawable/person_ybg"/>-->
-
-                <!--        </com.google.android.material.card.MaterialCardView>-->
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/item2_mat_container"
@@ -302,7 +287,7 @@
                             android:id="@+id/item2_status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_19sdp"
                             android:layout_marginTop="@dimen/_12sdp"
                             android:ellipsize="end"
                             android:fontFamily="@font/nunitosans_10pt_semibold"
@@ -317,13 +302,13 @@
                             android:id="@+id/item2_details"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_19sdp"
                             android:layout_marginTop="@dimen/_3sdp"
                             android:layout_marginBottom="@dimen/_12sdp"
                             android:ellipsize="end"
                             android:fontFamily="@font/nunitosans_10pt_regular"
                             android:maxLines="1"
-                            android:text="Hi community! I am open to new connections "
+                            android:text="Hi community! I am open to new connections \u0022😊\u0022"
                             android:textColor="@color/darkblue"
                             android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -359,22 +344,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/item2">
-                <!--        <com.google.android.material.card.MaterialCardView-->
-                <!--            android:layout_width="@dimen/_42sdp"-->
-                <!--            android:layout_height="@dimen/_42sdp"-->
-                <!--            android:id="@+id/img1"-->
-                <!--            app:cardElevation="2dp"-->
-                <!--            android:layout_marginTop="@dimen/_16sdp"-->
-                <!--            app:cardUseCompatPadding="true"-->
-                <!--            app:layout_constraintTop_toTopOf="@id/item1"-->
-                <!--            app:layout_constraintStart_toStartOf="@id/item1"-->
-                <!--            app:layout_constraintEnd_toStartOf="@id/item1">-->
-                <!--            <ImageView-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="match_parent"-->
-                <!--                android:src="@drawable/person_ybg"/>-->
-
-                <!--        </com.google.android.material.card.MaterialCardView>-->
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/item3_mat_container"
@@ -465,7 +434,7 @@
                             android:id="@+id/item3_status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_19sdp"
                             android:layout_marginTop="@dimen/_12sdp"
                             android:ellipsize="end"
                             android:fontFamily="@font/nunitosans_10pt_semibold"
@@ -480,13 +449,13 @@
                             android:id="@+id/item3_details"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_19sdp"
                             android:layout_marginTop="@dimen/_3sdp"
                             android:layout_marginBottom="@dimen/_12sdp"
                             android:ellipsize="end"
                             android:fontFamily="@font/nunitosans_10pt_regular"
                             android:maxLines="1"
-                            android:text="Hi community! I am open to new connections "
+                            android:text="Hi community! I am open to new connections \u0022😊\u0022"
                             android:textColor="@color/darkblue"
                             android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -524,22 +493,6 @@
                 android:layout_marginBottom="@dimen/_80sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/item3">
-                <!--        <com.google.android.material.card.MaterialCardView-->
-                <!--            android:layout_width="@dimen/_42sdp"-->
-                <!--            android:layout_height="@dimen/_42sdp"-->
-                <!--            android:id="@+id/img1"-->
-                <!--            app:cardElevation="2dp"-->
-                <!--            android:layout_marginTop="@dimen/_16sdp"-->
-                <!--            app:cardUseCompatPadding="true"-->
-                <!--            app:layout_constraintTop_toTopOf="@id/item1"-->
-                <!--            app:layout_constraintStart_toStartOf="@id/item1"-->
-                <!--            app:layout_constraintEnd_toStartOf="@id/item1">-->
-                <!--            <ImageView-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="match_parent"-->
-                <!--                android:src="@drawable/person_ybg"/>-->
-
-                <!--        </com.google.android.material.card.MaterialCardView>-->
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/item4_mat_container"
@@ -630,7 +583,7 @@
                             android:id="@+id/item4_status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_19sdp"
                             android:layout_marginTop="@dimen/_12sdp"
                             android:ellipsize="end"
                             android:fontFamily="@font/nunitosans_10pt_semibold"
@@ -645,13 +598,13 @@
                             android:id="@+id/item4_details"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_19sdp"
                             android:layout_marginTop="@dimen/_3sdp"
                             android:layout_marginBottom="@dimen/_12sdp"
                             android:ellipsize="end"
                             android:fontFamily="@font/nunitosans_10pt_regular"
                             android:maxLines="1"
-                            android:text="Hi community! I am open to new connections "
+                            android:text="Hi community! I am open to new connections \u0022😊\u0022"
                             android:textColor="@color/darkblue"
                             android:textSize="@dimen/_10ssp"
                             app:layout_constraintBottom_toBottomOf="parent"

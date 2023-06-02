@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@id/avail_txt" />
 
     <TextView
-        android:id="@+id/purpose_txt"
+        android:id="@+id/status_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16sdp"
@@ -66,11 +66,126 @@
         android:ellipsize="end"
         android:fontFamily="@font/nunitosans_10pt_semibold"
         android:maxLines="1"
-        android:text="Select Purpose"
+        android:text="Add Your Status"
         android:textColor="@color/darkblue"
         android:textSize="@dimen/_10ssp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/avail_spinner" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/status_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:boxBackgroundMode="none"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="1dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="250"
+        app:counterTextColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_txt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/status_text_view"
+            android:fontFamily="@font/nunitosans_10pt_regular"
+            android:paddingBottom="@dimen/_10sdp"
+            android:selectAllOnFocus="true"
+            android:text="Hi Community! I  am open to new connections \u0022😊\u0022"
+            android:textColor="@color/blue"
+            android:textColorHighlight="@color/grey"
+            android:textColorHint="@color/blue"
+            android:textSize="@dimen/_10ssp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/local_dist_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_10pt_semibold"
+        android:maxLines="1"
+        android:text="Select Hyper Local Diatance"
+        android:textColor="@color/darkblue"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status_container" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        style="@style/Widget.App.Slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:stepSize="1"
+        android:value="50"
+        android:valueFrom="1"
+        android:valueTo="100"
+        app:haloColor="@color/white"
+        app:labelBehavior="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/local_dist_txt"
+        app:tickVisible="false"
+        app:trackColorActive="@color/blue"
+        app:trackColorInactive="@color/progressgrey"
+        app:trackHeight="2dp" />
+
+    <TextView
+        android:id="@+id/dist_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:maxLines="1"
+        android:text="1 Km"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="@id/slider"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dist_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_10pt_regular"
+        android:maxLines="1"
+        android:text="100 Km"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="@id/slider"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/purpose_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_10pt_semibold"
+        android:maxLines="1"
+        android:text="Select Purpose"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/slider" />
+
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup"
@@ -89,7 +204,12 @@
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="Coffee"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp"
+            app:chipBackgroundColor="@color/blue"
+            app:chipEndPadding="@dimen/_8sdp"
             app:chipStrokeColor="@color/blue"
             app:chipStrokeWidth="1dp"
             app:ensureMinTouchTargetSize="true" />
@@ -99,8 +219,12 @@
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checkable="true"
+            android:checked="true"
             android:text="Business"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp"
+            app:chipBackgroundColor="@color/blue"
+            app:chipEndPadding="@dimen/_8sdp"
             app:chipStrokeColor="@color/blue"
             app:chipStrokeWidth="1dp"
             app:ensureMinTouchTargetSize="true" />
@@ -111,16 +235,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hobbies"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_9sdp"
+            app:chipBackgroundColor="@color/white"
+            app:chipEndPadding="@dimen/_8sdp"
             app:chipStrokeColor="@color/blue"
             app:chipStrokeWidth="1dp"
-            app:ensureMinTouchTargetSize="true"/>
+            app:ensureMinTouchTargetSize="true" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/friendship"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="Friendship"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp"
+            app:chipBackgroundColor="@color/blue"
+            app:chipEndPadding="@dimen/_8sdp"
             app:chipStrokeColor="@color/blue"
             app:chipStrokeWidth="1dp"
             app:ensureMinTouchTargetSize="true" />
@@ -131,6 +264,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Movies"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_9sdp"
+            app:chipBackgroundColor="@color/white"
+            app:chipEndPadding="@dimen/_8sdp"
             app:chipStrokeColor="@color/blue"
             app:chipStrokeWidth="1dp"
             app:ensureMinTouchTargetSize="true" />
@@ -141,6 +278,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dinning"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_9sdp"
+            app:chipBackgroundColor="@color/white"
+            app:chipEndPadding="@dimen/_8sdp"
             app:chipStrokeColor="@color/blue"
             app:chipStrokeWidth="1dp"
             app:ensureMinTouchTargetSize="true" />
@@ -151,6 +292,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dating"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_9sdp"
+            app:chipBackgroundColor="@color/white"
+            app:chipEndPadding="@dimen/_8sdp"
             app:chipStrokeColor="@color/blue"
             app:chipStrokeWidth="1dp"
             app:ensureMinTouchTargetSize="true" />
@@ -161,10 +306,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Matrimony"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_9sdp"
+            app:chipBackgroundColor="@color/white"
+            app:chipEndPadding="@dimen/_8sdp"
             app:chipStrokeColor="@color/blue"
             app:chipStrokeWidth="1dp"
             app:ensureMinTouchTargetSize="true" />
 
     </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:backgroundTint="@color/blue"
+        android:paddingLeft="@dimen/_37sdp"
+        android:paddingRight="@dimen/_37sdp"
+        android:text="Save \u0026 Explore"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup"
+        app:rippleColor="@color/darkblue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

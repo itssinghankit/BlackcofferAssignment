@@ -1,39 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:icon="@drawable/edit_profile"
-        android:title="Edit Profile" />
-    <item
-        android:icon="@drawable/my_network"
-        android:title="My Network" />
-    <item
-        android:icon="@drawable/switch_to_business"
-        android:title="Switch to Business" />
-    <item
-        android:icon="@drawable/switch_to_merchant"
-        android:title="Switch to Merchant" />
-    <item
-        android:icon="@drawable/dating"
-        android:title="Dating" />
-    <item
-        android:icon="@drawable/matrimony"
-        android:title="Matrimony" />
-    <item
-        android:icon="@drawable/buy_sell_rent"
-        android:title="Buy-Sell-Rent" />
-    <item
-        android:icon="@drawable/jobs"
-        android:title="Jobs" />
-    <item
-        android:icon="@drawable/business_cards"
-        android:title="Business Cards" />
-    <item
-        android:icon="@drawable/hashtags"
-        android:title="Hashtags" />
-    <item
-        android:icon="@drawable/notes"
-        android:title="Notes" />
-    <item
-        android:icon="@drawable/live_locations"
-        android:title="Live Loactions" />
+    <item android:title="Edit Profile" />
+    <item android:title="My Network" />
+    <item android:title="Switch to Business" />
+    <item android:title="Switch to Merchant" />
+    <item android:title="Dating" />
+    <item android:title="Matrimony" />
+    <item android:title="Buy-Sell-Rent" />
+    <item android:title="Jobs" />
+    <item android:title="Business Cards" />
+    <item android:title="Hashtags" />
+    <item android:title="Notes" />
+    <item android:title="Live Loactions" />
 </menu>

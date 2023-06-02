@@ -2,9 +2,13 @@ package com.example.blackcoffer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.MenuItem
+import android.view.View
 import android.widget.ArrayAdapter
 import com.example.blackcoffer.databinding.ActivityRefineBinding
 import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 
 class RefineActivity : AppCompatActivity() {
     private lateinit var binding:ActivityRefineBinding
@@ -20,15 +24,29 @@ class RefineActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(R.layout.custom_spinner_item)
         binding.availSpinner.adapter=adapter
 
-        //***********
-//        binding.chipGroup.setOnCheckedStateChangeListener{ group,checkedId->
-//            val chip:Chip? =group.findViewById(checkedId as Int)
-//            chip?.setChipBackgroundColorResource(R.color.darkblue)
-//
-//        }
-//        binding.matrimony.setChipBackgroundColor(getColorStateList(R.drawable.purpose_chips_bg))
+        //when back button on toolbar is clicked
+        setSupportActionBar(binding.topAppBar)
+        binding.topAppBar.setNavigationOnClickListener{
+            finish()
+        }
 
+       // after purpose chips are chicked
+        binding.chipGroup.setOnCheckedStateChangeListener{ group,checkedId->
+           for(i in 0 until binding.chipGroup.childCount){
+               val chip=binding.chipGroup.getChildAt(i) as Chip
+               if( chip.isChecked){
+                   chip.setChipBackgroundColor(getColorStateList(R.color.blue))
+                   chip.setTextColor(getColorStateList(R.color.white))
+               }
+               else{
+                   chip.setChipBackgroundColor(getColorStateList(R.color.white))
+                   chip.setTextColor(getColorStateList(R.color.blue))
+               }
+           }
+
+        }
 
     }
-    override fun ch
+
+
 }
