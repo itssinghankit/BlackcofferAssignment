@@ -1,14 +1,730 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".fragments.MerchantFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search"
+        style="@style/searchbar"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/searchbar"
+        android:padding="@dimen/_4sdp"
+        app:iconifiedByDefault="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="Search" />
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/filter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/search">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/item1_mat_container"
+                    android:layout_width="@dimen/_280sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/item1_invite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:fontFamily="@font/nunitosans_10pt_bold"
+                            android:text="+ INVITE"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/item1_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_60sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_semibold"
+                            android:maxLines="1"
+                            android:text="Shivam Sharma"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item1_invite" />
+
+                        <TextView
+                            android:id="@+id/item1_loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_60sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="1"
+                            android:text="Noida, within 3.2 KM"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item1_name" />
+
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/item1_progress_bar"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:progress="30"
+                            app:indicatorColor="@color/darkblue"
+                            app:layout_constraintStart_toStartOf="@id/item1_loc"
+                            app:layout_constraintTop_toBottomOf="@+id/item1_loc"
+                            app:trackColor="@color/progressgrey"
+                            app:trackCornerRadius="@dimen/_5sdp"
+                            app:trackThickness="@dimen/_9sdp" />
+
+                        <ImageView
+                            android:id="@+id/call_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/call_btn"
+                            app:layout_constraintStart_toStartOf="@id/item1_progress_bar"
+                            app:layout_constraintTop_toBottomOf="@id/item1_progress_bar" />
+
+                        <ImageView
+                            android:id="@+id/add_friend_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/add_frnd_btn"
+                            app:layout_constraintStart_toEndOf="@+id/call_btn"
+                            app:layout_constraintTop_toBottomOf="@id/item1_progress_bar" />
+
+                        <ImageView
+                            android:id="@+id/item1_loc_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/loc_btn"
+                            app:layout_constraintStart_toEndOf="@+id/add_friend_btn"
+                            app:layout_constraintTop_toBottomOf="@id/item1_progress_bar" />
+
+
+                        <TextView
+                            android:id="@+id/item1_tagline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_19sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_19sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="2"
+                            android:text="Hi community! We have great deals for you. Check us out!!"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/add_friend_btn" />
+
+                        <TextView
+                            android:id="@+id/item1_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_19sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_19sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="2"
+                            android:text="Two Wheeler Rental Agency"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item1_tagline" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/img1"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_65sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item1_mat_container">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/person_ybg" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/item1">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/item2_mat_container"
+                    android:layout_width="@dimen/_280sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/item2_invite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:fontFamily="@font/nunitosans_10pt_bold"
+                            android:text="+ INVITE"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/item2_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_60sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_semibold"
+                            android:maxLines="1"
+                            android:text="Shivam Sharma"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item2_invite" />
+
+                        <TextView
+                            android:id="@+id/item2_loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_60sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="1"
+                            android:text="Noida, within 3.2 KM"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item2_name" />
+
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/item2_progress_bar"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:progress="30"
+                            app:indicatorColor="@color/darkblue"
+                            app:layout_constraintStart_toStartOf="@id/item2_loc"
+                            app:layout_constraintTop_toBottomOf="@+id/item2_loc"
+                            app:trackColor="@color/progressgrey"
+                            app:trackCornerRadius="@dimen/_5sdp"
+                            app:trackThickness="@dimen/_9sdp" />
+
+                        <ImageView
+                            android:id="@+id/item2_call_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/call_btn"
+                            app:layout_constraintStart_toStartOf="@id/item2_progress_bar"
+                            app:layout_constraintTop_toBottomOf="@id/item2_progress_bar" />
+
+                        <ImageView
+                            android:id="@+id/item2_add_friend_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/add_frnd_btn"
+                            app:layout_constraintStart_toEndOf="@+id/item2_call_btn"
+                            app:layout_constraintTop_toBottomOf="@id/item2_progress_bar" />
+
+                        <ImageView
+                            android:id="@+id/item2_loc_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/loc_btn"
+                            app:layout_constraintStart_toEndOf="@+id/item2_add_friend_btn"
+                            app:layout_constraintTop_toBottomOf="@id/item2_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/item2_tagline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_19sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_19sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="2"
+                            android:text="Hi community! We have great deals for you. Check us out!!"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item2_add_friend_btn" />
+
+                        <TextView
+                            android:id="@+id/item2_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_19sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_19sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="2"
+                            android:text="Two Wheeler Rental Agency"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item2_tagline" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/img2"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_65sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item2_mat_container">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/person_ybg" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/item2">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/item3_mat_container"
+                    android:layout_width="@dimen/_280sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/item3_invite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:fontFamily="@font/nunitosans_10pt_bold"
+                            android:text="+ INVITE"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/item3_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_60sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_semibold"
+                            android:maxLines="1"
+                            android:text="Shivam Sharma"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item3_invite" />
+
+                        <TextView
+                            android:id="@+id/item3_loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_60sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="1"
+                            android:text="Noida, within 3.2 KM"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item3_name" />
+
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/item3_progress_bar"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:progress="30"
+                            app:indicatorColor="@color/darkblue"
+                            app:layout_constraintStart_toStartOf="@id/item3_loc"
+                            app:layout_constraintTop_toBottomOf="@+id/item3_loc"
+                            app:trackColor="@color/progressgrey"
+                            app:trackCornerRadius="@dimen/_5sdp"
+                            app:trackThickness="@dimen/_9sdp" />
+
+                        <ImageView
+                            android:id="@+id/item3_call_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/call_btn"
+                            app:layout_constraintStart_toStartOf="@id/item3_progress_bar"
+                            app:layout_constraintTop_toBottomOf="@id/item3_progress_bar" />
+
+                        <ImageView
+                            android:id="@+id/item3_add_friend_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/add_frnd_btn"
+                            app:layout_constraintStart_toEndOf="@+id/item3_call_btn"
+                            app:layout_constraintTop_toBottomOf="@id/item3_progress_bar" />
+
+                        <ImageView
+                            android:id="@+id/item3_loc_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/loc_btn"
+                            app:layout_constraintStart_toEndOf="@+id/item3_add_friend_btn"
+                            app:layout_constraintTop_toBottomOf="@id/item3_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/item3_tagline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_19sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_19sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="2"
+                            android:text="Hi community! We have great deals for you. Check us out!!"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item3_add_friend_btn" />
+
+                        <TextView
+                            android:id="@+id/item3_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_19sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_19sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="2"
+                            android:text="Two Wheeler Rental Agency"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item3_tagline" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/img3"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_65sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item3_mat_container">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/person_ybg" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/item3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_80sdp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/item4_mat_container"
+                    android:layout_width="@dimen/_280sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/item4_invite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:fontFamily="@font/nunitosans_10pt_bold"
+                            android:text="+ INVITE"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/item4_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_60sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_semibold"
+                            android:maxLines="1"
+                            android:text="Shivam Sharma"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item4_invite" />
+
+                        <TextView
+                            android:id="@+id/item4_loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_60sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="1"
+                            android:text="Noida, within 3.2 KM"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item4_name" />
+
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/item4_progress_bar"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:progress="30"
+                            app:indicatorColor="@color/darkblue"
+                            app:layout_constraintStart_toStartOf="@id/item4_loc"
+                            app:layout_constraintTop_toBottomOf="@+id/item4_loc"
+                            app:trackColor="@color/progressgrey"
+                            app:trackCornerRadius="@dimen/_5sdp"
+                            app:trackThickness="@dimen/_9sdp" />
+
+                        <ImageView
+                            android:id="@+id/item4_call_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/call_btn"
+                            app:layout_constraintStart_toStartOf="@id/item4_progress_bar"
+                            app:layout_constraintTop_toBottomOf="@id/item4_progress_bar" />
+
+                        <ImageView
+                            android:id="@+id/item4_add_friend_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/add_frnd_btn"
+                            app:layout_constraintStart_toEndOf="@+id/item4_call_btn"
+                            app:layout_constraintTop_toBottomOf="@id/item4_progress_bar" />
+
+                        <ImageView
+                            android:id="@+id/item4_loc_btn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:src="@drawable/loc_btn"
+                            app:layout_constraintStart_toEndOf="@+id/item4_add_friend_btn"
+                            app:layout_constraintTop_toBottomOf="@id/item4_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/item4_tagline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_19sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_19sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="2"
+                            android:text="Hi community! We have great deals for you. Check us out!!"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item4_add_friend_btn" />
+
+                        <TextView
+                            android:id="@+id/item4_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_19sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_19sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_10pt_regular"
+                            android:maxLines="2"
+                            android:text="Two Wheeler Rental Agency"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/darkblue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/item4_tagline" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/img4"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_65sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/item4_mat_container">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/person_ybg" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
